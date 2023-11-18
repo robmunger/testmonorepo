@@ -8,12 +8,15 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "reveal-md": "reveal-md",
+    "mdxslides": "reveal-md ./src/content/docs/sandbox/Revealjs.mdx -w"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
     "@astrojs/starlight": "^0.12.0",
     "astro": "^3.2.3",
+    "reveal-md": "^5.5.2",
     "sharp": "^0.32.5",
     "typescript": "^5.2.2",
     "ui": "workspace:^"

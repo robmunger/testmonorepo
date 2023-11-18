@@ -7,19 +7,21 @@ export default defineConfig({
 		starlight({
 			title: 'My Docs',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/robmunger/testmonorepo',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Robs Notes',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
+						{ label: 'Notes/Todoooo', link: '/notes/notes/' },
+						{ label: 'Questions', link: '/notes/questions/' },
 					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Sandbox',
+					items: [
+						{ label: 'Sandbox .mdx page', link: '/sandbox/mdxpage/' },
+						{ label: 'Reveal.js Demo', link: '/sandbox/revealjs/' },
+						{ label: 'Real Expanded Slides', link: '/sandbox/realslides/' },
+					],
 				},
 			],
 		}),

@@ -1,0 +1,191 @@
+---
+title: "CAL Slides - Nov 9 - Expanded"
+author: Rob Munger
+description: An expanded version of the slides presented on Nov 9
+---
+                <head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.css" integrity="sha384-WsHMgfkABRyG494OmuiNmkAOk8nhO1qE+Y6wns6v+EoNoTNxrWxYpl5ZYWFOLPCM" crossorigin="anonymous"></link></head>
+
+        
+## [PDF of Slides](../../7a/Slides.pdf)
+
+## [Web version of Slides](../../7a/Slides.html)
+
+## About this website
+
+This page adds requested content to the slides I presented on Thursday. Specifically, it adds detailed written out solutions to a problem we did during section. Later I hope to add some screenshots to jog memories of what we covered during section.
+
+Whereas slides are necessarily terse and concise, this website will give me space to provide additional detail. Whereas slides are designed to promote interactions and focus during section, this website is for studying at your leisure, ideally curled up in your favorite chair.
+
+For this set of slides, the "expanded" content is indented in the "On this page" list. It is also marked with a colorful icon:
+
+* Practice problems are marked with a ✍ icon.
+* Practice problem solutions are marked with a ✔ icon.
+* Screenshots from section are marked with a 🖥 icon. They will be primarily helpful for people who attended section.
+
+You can still reach my original website at [robmunger.com/1920](https://robmunger.com/1920) and my formula sheet at [robmunger.com/1920share](https://robmunger.com/1920share).
+
+## Why this website (only if you're curious)
+
+This site is part of a larger project that I've been working on for a couple months. The software that I've been using for my website is very much showing its limits - Microsoft simply isn't investing in things I need. Therefore, I'm building a new system as a hand-crafted website. This new system will be faster, more reliable, more flexible, and easier to maintain/upgrade.
+
+It's hard to build content for a system you know you are moving beyond, so when I decided to make some slides for last week's section, I used one of the new tools ([Marp](https://marp.app/)). The slides were very concise (as slides should be), and students were concerned about being able to review the material afterward. Therefore, I converted the slides to a website using another of the new tools ([Astro](https://astro.build/)). This gives me far more space to provide more detailed solutions and notes on materials from the slide deck. 
+
+I'm hoping to debut this new "technology stack" in one course next semester - probably e2000. It should continue to evolve dramatically until that point and afterward as well! For example, in future sections, I may use a different software for the slides.
+
+Bottom line: this site is just an experiment, helping me post some materials that students requested during section. As I learn to use the tools better, the website will improve dramatically. Thank you for your patience in the meantime! Feedback on the slides and this site is very welcome!
+        {/*AOE*/}
+
+## Return vs. Risk
+
+Investments are about ① Return and ② Risk:
+* Return = $r$
+* Risk = $σ$ = standard deviation
+
+---
+
+## Expected Value
+
+* Can't know *actual* $r$ until its too late to choose
+* Can calculate $E(r)$ beforehand based on our probabilistic beliefs
+
+
+        <img src="/7a/EV.png" alt="Bruce's EV slide" width="50%" height="50%"></img>
+
+
+---
+
+## "-rF"
+
+* $r-r_F$ is *Excess Return*
+* $E(r)-r_F$ is Risk Premium
+* Subtract $r_F$ to see if a risky asset beats a risk free asset
+
+        {/*ws*/}<img src="/7a/RiskPrem.png" alt="Bruce's EV slide" width="50%" height="50%"></img>{/*we*/}
+        {/*wxs![bg right 100%](./RiskPrem.png)wxe*/}
+
+        {/*ws*/}
+### 🖥 How to think of Sharpe Ratio
+
+        <img src="/7a/SharpeRatio.png" alt="How to think of Sharpe Ratio" width="50%" height="50%"></img>
+
+
+### 🖥 We can calculate the Sharpe ratio for any risky return
+
+        <img src="/7a/Ratio.png" alt="We can calculate the Sharpe ratio for any risky return" width="50%" height="50%"></img>
+        {/*we*/}
+
+---
+
+## Notation
+
+* Complete portfolio is a mix -
+    - % optimized risky portfolio: $y$ 
+    - % risk-free T-bills: $(1-y)$
+* **C**omplete portfolio = $r_C$, $σ_C$
+* risky **P**ortfolio = $r_P$, $σ_P$
+* risk **F**ree t-bills = $r_F, σ_F=0$
+
+footer: See also: [🧭  Big Picture](https://1drv.ms/u/s!AvbXd4_8gfP_iNoxN6pEMMkqF710mw?wd=target%28Part%201%20-%20Study%20Guide.one%7C76492D4B-3AB1-432E-857D-29FBFF65F2F9%2F%F0%9F%A7%AD%20%20Big%20Picture%7CFC761D7E-F4DB-4953-8FCB-51F3E648E36A%2F%29)
+
+---
+
+## Capital Allocation Decision
+
+* This means choosing y and (1-y)
+* Notation: **C**omplete, risky **P**ortfolio (y), risk-**F**ree (1-y)
+* **Return**: $E(r_C)=r_F+y(E(r_P)-r_F)$
+* **Risk**: $σ_C=y σ_P$
+
+✅ Do you understand *each letter* of these equations?
+
+---
+
+## Visually
+
+* **Return** on y axis and **Risk** on x axis
+* $y$ determines location on red line.
+* What $y$ does investor prefer?
+
+        {/*ws*/}<img src="/7a/CAL.png" alt="Bruce's EV slide" width="50%" height="50%"></img>{/*we*/}
+
+---
+
+## Replicating the diagram
+
+Steps:
+1) Calculate $E(r_C)$ and $σ_C$ for $y=0$ and $y=1$.
+1) Plot the points.
+2) Calculate the slope of the line connecting them.
+
+--- 
+
+### ✍ Replicate diagram
+
+Remember our two formulas:
+
+* Return: $E(r_C)= r_F + y(E(r_P)- r_F)$
+* Risk: $σ_C = y σ_P$
+
+        <img src="/7a/OnlyAxes.png" alt="Bruce's EV slide" width="50%" height="50%"></img>
+
+
+footer: See [robmunger.com/1920sectionslides](https://1920sectionslides.netlify.app/guides/example/) for full solution.
+
+---
+
+### ✔ Coordinates when y=0
+
+First, we calculate expected return and risk for point ⓐ. What are $E(r_C)$ and $σ_C$ when we don't allocate any money to the risky portfolio (ie when y=0%)?
+
+* Return: $E(r_C)= r_F + 0(E(r_P)- r_F)=r_F$
+* Risk: $σ_C = 0σ_P = 0$ 
+
+---
+
+### ✔ Coordinates when y=1
+
+Next, we calculate expected return and risk for point ⓑ. What are $E(r_C)$ and $σ_C$ when we don't allocate any money to the risky portfolio (ie when y=100%=1)?
+
+* Return: $E(r_C)= r_F + 1(E(r_P)- r_F)= E(r_p)$
+* Risk: $σ_C = 1σ_P = σ_p$ 
+
+---
+
+### ✔ Plot the points
+
+Now we plot points ⓐ and ⓑ on a standard graph, with $E(r_C)$ on the vertical axis and $σ_C$ on the horizontal axis:
+
+                {/*ws*/}<img src="/7a/TwoPoints.png" alt="Bruce's EV slide" width="50%" height="50%"></img>{/*we*/}
+                {/*wxs ![bg right 100%](./TwoPoints.png) wxe*/}
+
+---
+
+### ✔ Slope
+
+To calculate the slope of the CAL, we just calculate the slope between point ⓐ and ⓑ in the diagram above.
+
+
+
+---
+
+### ✅ Try it on your own
+
+
+---
+
+### 🖥 Leverage
+
+        {/*ws*/}<img src="/7a/Leverage.png" alt="Leverage" width="100%" height="100%"></img>{/*we*/}
+
+---
+
+## Roots in probability theory
+
+**Return**: $E(aX + bY) = aE(X) + bE(Y)$
+
+**Risk**: $Var(aX + bY) = a^2Var(X) + b^2Var(Y) + 2abCov(X,Y)$
+
+Next Week we will apply these two two formulas to get new formulas for Return and Risk
+
+footer: See also [🔎 Where did our two formulas come from?](https://1drv.ms/u/s!AvbXd4_8gfP_iNoxN6pEMMkqF710mw?wd=target%28Part%201%20-%20Study%20Guide.one%7C76492D4B-3AB1-432E-857D-29FBFF65F2F9%2F%F0%9F%94%8E%20%20Where%20did%20our%20two%20formulas%20come%20from%3F%7CBEF7CE4F-A4F3-4506-857D-4D659A0E859A%2F%29) for full solution.
+
